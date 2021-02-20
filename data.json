@@ -1,0 +1,17 @@
+[
+    {
+        "name": "abc",
+        "team": "Lakers",
+        "pointsPerGame": 27
+    },
+    {
+        "name": ":<",
+        "team": "Lakers",
+        "pointsPerGame": 21
+    },
+    {
+        "name": ":>",
+        "team": "Lakers",
+        "pointsPerGame": 22
+    }
+]
