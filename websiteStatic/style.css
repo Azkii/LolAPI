@@ -9,7 +9,6 @@
         transform: translateY(0px);
     }
 }
-
 body {
     padding: 0;
     margin: 0;
@@ -91,6 +90,7 @@ nav {
     color: whitesmoke;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 .sectionPhoto {
     display: flex;
@@ -223,6 +223,13 @@ nav {
     background: white;
     border: solid black 2px;
     border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.reportBugForm button:hover {
+    transition: ease-in 0.1s;
+    color: whitesmoke;
+    background-color: black;
 }
 @media only screen and (max-width: 1350px) {
     .aboutUs {
@@ -278,8 +285,8 @@ nav {
     padding-bottom: 20px;
     width: 100%;
     min-height: 600px;
-    background: rgb(98, 153, 216);
-    color: rgb(254, 254, 254);
+    background: whitesmoke;
+    color: black;
 }
 .daily h1 {
     font-size: 40px;
@@ -305,13 +312,70 @@ nav {
     border-radius: 10px;
 }
 .challangeList > div > p {
-    color: whitesmoke;
-    font-size: 30px;
+    text-align: center;
+    color: black;
+    font-size: 28px;
     font-weight:  bold;
 }
 @media only screen and (max-width: 800px) {
     .challangeList {
         flex-direction: column;
         align-items: center;
+    }
+}
+.dailyResultCharacter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 200px;
+}
+.dailyResultCharacter > h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 80px 0 80px 0;
+    letter-spacing: 2px;
+}
+.dailyResult-imageBoxCharacter {
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+.dailyResult-imageCharacter {
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.dailyResult-infoCharacter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    color: whitesmoke;
+    height: 80vh;
+    z-index: 100;
+    font-size: 50px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-family: 'Teko', sans-serif;
+}
+.dailyResult-infoCharacter > * {
+    margin: 0;
+    padding: 0;
+}
+.dailyResult-infoCharacter > p {
+    font-size: 35px;
+}
+.dailyResult-infoCharacter > h1 {
+    letter-spacing: 2px;
+    font-size: 150px;
+}
+@media only screen and (max-width: 500px) {
+    .dailyResult-infoCharacter > p {
+        font-size: 30px;
+    }
+    .dailyResult-infoCharacter > h1 {
+        font-size: 120px;
     }
 }

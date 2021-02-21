@@ -1,12 +1,11 @@
-fetch(`http://localhost:3000/data`)
-.then((res) => {
-    return res.json()
-})
-.then((data) => {
-    console.log(data);
-})
+let singleChamps = "";
+const champRollBtn = document.querySelector(".rollCharBtn");
 window.addEventListener('load', () => {
+    fetchSingleChampion();
     galleryInt();
+});
+champRollBtn.addEventListener("click", () => {
+    rollChampion(singleChamps);
 });
 //FUNctions
 const galleryInt = () => {
@@ -25,6 +24,7 @@ const galleryInt = () => {
         },
     ]
     let photoIndex = 1;
+
     setInterval( () => {
         const photo = document.querySelector(".photoHeader");
         const photoHolder = document.querySelector(".sectionPhoto");
@@ -39,3 +39,30 @@ const galleryInt = () => {
         })
     },8000);
 };
+
+const fetchSingleChampion = () => {
+    fetch(`http://localhost:3000/data`)
+        .then((res) => {
+            return res.json()
+        })
+        .then((data) => {
+            singleChamps = data[0].data;
+        })
+};
+const rollChampion = (obj) => {
+    const result = Object.keys(obj).map((key) => [obj[key]]);
+    const resultChampion = result[Math.floor(Math.random() * result.length)];
+    displayDailyData(resultChampion[0]);
+}
+const displayDailyData = (resultChampion) => {
+    const photoHolder = document.querySelector(".dailyResult-imageCharacter");
+    animationTest(photoHolder);
+    console.log(resultChampion);
+}
+const animationTest = (photo) => {
+    photo.parentNode.addEventListener('mousemove', (e) => {
+        let xAxis = (window.innerWidth / 2 - e.pageX ) / 220
+        let yAxis = (window.innerHeight / 2 - e.pageY ) / 220
+        photo.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+    })
+}
