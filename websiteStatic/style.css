@@ -1,7 +1,7 @@
 /*keyframes*/
 @keyframes drop {
     0% {
-        opacity: 0.4;
+        opacity: 0.6;
         transform: translateY(-50px);
     }
     100% {
@@ -126,21 +126,192 @@ nav {
 }
 .aboutUs {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: auto;
     width: 80%;
 }
-.aboutUs h1 {
+.aboutUs > h1 {
     margin-top: 100px;
     text-align: center;
     font-size: 40px;
-    width: 600px;
+    max-width: 600px;
 }
 .line {
-    margin-top: 10px;
-    margin-left: 200px;
     position: absolute;
     width: 200px;
     height: 5px;
     background: black;
+}
+.aboutUsMain {
+    width: 100%;
+    display: flex;
+}
+.aboutUsMain > div{
+    margin-top: 50px;
+    display: flex;
+    width: 50%;
+    height: 600px;
+}
+.thanks {
+    flex-direction: column;
+}
+.thanks h1 {
+    font-size: 35px;
+}
+.thanks p {
+    font-size: 25px;
+    width: 70%;
+}
+.reportBug {
+    flex-direction: column;
+    align-items: center;
+}
+.reportBug {
+    font-size: 25px;
+}
+.reportBugForm {
+    padding-top: 20px;
+    border-radius: 5px;
+    width: 80%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.024),
+    0 6.7px 2.3px rgba(0, 0, 0, 0.018),
+    0 12.5px 4px rgba(0, 0, 0, 0.06),
+    0 22.3px 5.9px rgba(0, 0, 0, 0.032),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.026),
+    0 100px 20px rgba(0, 0, 0, 0.12);
+}
+.clientInputs input {
+    width: 200px;
+    height: 30px;
+    border: none;
+    background: rgb(241, 235, 241);
+    font-size: 20px;
+    text-align: center;
+}
+.messageBox {
+    width: 100%;
+}
+.messageBox p {
+    padding-bottom: 2px;
+    font-weight: bold;
+    border-bottom: solid black 4px;
+    margin-left: 10%;
+    width: 150px;
+}
+.messageBox textarea {
+    margin-left: 10%;
+    height: 200px;
+    background: white;
+    width: 80%;
+    resize: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 10px 5px 10px 5px;
+}
+.reportBugForm button {
+    margin-top: 25px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background: white;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 1350px) {
+    .aboutUs {
+        width: 100%;
+    }
+    .aboutUsMain {
+        flex-direction: column;
+    }
+    .aboutUsMain > div {
+        margin-left: 10%;
+        width: 80%;
+    }
+    .thanks {
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .aboutUsMain > div {
+        margin: 50px 0 50px 0;
+        width: 100%;
+        height: auto;
+    }
+    .clientInputs {
+        text-align: center;
+    }
+    .clientInputs input:nth-child(1) {
+        margin-bottom: 10px;
+    }
+    .aboutUs > h1 {
+        font-size: 25px;
+        margin: 0;
+    }
+    .thanks h1 {
+        font-size: 20px;
+    }
+    .thanks p,.thanks h2 {
+        font-size: 18px;
+    }
+    .reportBug {
+        font-size: 18px;
+    }
+    .reportBugForm {
+        padding-bottom: 25px;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: "";
+    }
+}
+.daily {
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    min-height: 600px;
+    background: rgb(98, 153, 216);
+    color: rgb(254, 254, 254);
+}
+.daily h1 {
+    font-size: 40px;
+    text-align: center;
+}
+.challangeList {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.challangeList div {
+    cursor: pointer;
+    margin-top: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.challangeList > div > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.challangeList > div > p {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight:  bold;
+}
+@media only screen and (max-width: 800px) {
+    .challangeList {
+        flex-direction: column;
+        align-items: center;
+    }
 }
