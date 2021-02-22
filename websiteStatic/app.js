@@ -52,14 +52,44 @@ const fetchSingleChampion = () => {
 const rollChampion = (obj) => {
     const result = Object.keys(obj).map((key) => [obj[key]]);
     const resultChampion = result[Math.floor(Math.random() * result.length)];
-    displayDailyData(resultChampion[0]);
+    displayDailyChamp(resultChampion[0]);
 }
-const displayDailyData = (resultChampion) => {
+const displayDailyChamp = (resultChampion) => {
+    //prepere for the new data
+    let appendBox = document.querySelector(".dailyResultCharacter");
+    appendBox.innerHTML = "";
+    // create data
+    const h1Theme = document.createElement("h1");
+    const sectionBox = document.createElement("div");
+    const infoBox = document.createElement("div");
+    const imageBcg = document.createElement("img");
+    const parInfo = document.createElement("p");
+    const h1Info = document.createElement("h1");
+    // assigns classes
+    sectionBox.classList.add("dailyResult-imageBoxCharacter");
+    infoBox.classList.add("dailyResult-infoCharacter");
+    imageBcg.classList.add("dailyResult-imageCharacter");
+    //asign data
+    h1Theme.innerHTML = "Your champion for today";
+    parInfo.innerHTML = resultChampion.title;
+    h1Info.innerHTML = resultChampion.name;
+    imageBcg.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${resultChampion.name}_0.jpg`;
+    console.log(imageBcg.src === undefined);
+    //append data
+    infoBox.appendChild(parInfo);
+    infoBox.appendChild(h1Info);
+
+    sectionBox.appendChild(infoBox);
+    sectionBox.appendChild(imageBcg);
+    
+    appendBox.appendChild(h1Theme);
+    appendBox.appendChild(sectionBox);
+    //set animation
     const photoHolder = document.querySelector(".dailyResult-imageCharacter");
-    animationTest(photoHolder);
+    animationXY(photoHolder);
     console.log(resultChampion);
 }
-const animationTest = (photo) => {
+const animationXY = (photo) => {
     photo.parentNode.addEventListener('mousemove', (e) => {
         let xAxis = (window.innerWidth / 2 - e.pageX ) / 220
         let yAxis = (window.innerHeight / 2 - e.pageY ) / 220
