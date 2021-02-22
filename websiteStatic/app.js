@@ -1,11 +1,23 @@
 let singleChamps = "";
+let challengeList = "";
+let singleChallenges = "";
+let partyChallenges = "";
 const champRollBtn = document.querySelector(".rollCharBtn");
+const singleChallBtn = document.querySelector(".singleChallBtn");
+const partyChallBtn = document.querySelector(".partyChallBtn");
 window.addEventListener('load', () => {
     fetchSingleChampion();
+    fetchChallenges();
     galleryInt();
 });
 champRollBtn.addEventListener("click", () => {
     rollChampion(singleChamps);
+});
+singleChallBtn.addEventListener("click", () => {
+    rollSingleChallenge(singleChallenges);
+});
+partyChallBtn.addEventListener("click", () => {
+    rollPartyChallenge(partyChallenges);
 });
 //FUNctions
 const galleryInt = () => {
@@ -39,9 +51,20 @@ const galleryInt = () => {
         })
     },8000);
 };
-
+//fetch challenges
+const fetchChallenges = () => {
+    fetch(`https://lolchallangerapi.herokuapp.com/challenges`)
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        challengeList = data;
+        convertChallnges(challengeList);
+    })
+};
+//fetch char 
 const fetchSingleChampion = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/data`)
+    fetch(`https://lolchallangerapi.herokuapp.com/champions`)
         .then((res) => {
             return res.json()
         })
@@ -49,11 +72,34 @@ const fetchSingleChampion = () => {
             singleChamps = data[0].data;
         })
 };
+//convert challenges to 2 sections
+const convertChallnges = (data) => {
+    singleChallenges = data.filter((data) => {
+        return data.type === "singleChallenge";
+    });
+    partyChallenges = data.filter((data) => {
+        return data.type === "partyChallenge";
+    });
+}
+//roling the challenge for today
 const rollChampion = (obj) => {
     const result = Object.keys(obj).map((key) => [obj[key]]);
     const resultChampion = result[Math.floor(Math.random() * result.length)];
     displayDailyChamp(resultChampion[0]);
 }
+
+const rollSingleChallenge = (singleChallenges) => {
+    console.log("rolling single")
+    const resultChallange = singleChallenges[Math.floor(Math.random() * singleChallenges.length)];
+    console.log(resultChallange);
+};
+
+const rollPartyChallenge = (partyChallenges) => {
+    console.log("rolling party");
+    const resultChallange = partyChallenges[Math.floor(Math.random() * partyChallenges.length)];
+    console.log(resultChallange);
+};
+//display data
 const displayDailyChamp = (resultChampion) => {
     //prepere for the new data
     let appendBox = document.querySelector(".dailyResultCharacter");
@@ -84,15 +130,4 @@ const displayDailyChamp = (resultChampion) => {
     
     appendBox.appendChild(h1Theme);
     appendBox.appendChild(sectionBox);
-    //set animation
-    const photoHolder = document.querySelector(".dailyResult-imageCharacter");
-    animationXY(photoHolder);
-    console.log(resultChampion);
-}
-const animationXY = (photo) => {
-    photo.parentNode.addEventListener('mousemove', (e) => {
-        let xAxis = (window.innerWidth / 2 - e.pageX ) / 220
-        let yAxis = (window.innerHeight / 2 - e.pageY ) / 220
-        photo.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
-    })
 }

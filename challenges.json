@@ -1,0 +1,317 @@
+[
+    {
+        "id": 1,
+        "type":"singleChallenge",
+        "name": "Good vibes only",
+        "PL":"Odnawiaj mane sojusznikow za pomoca Clarity",
+        "EN":"Restore comrades mana with Clarity",
+        "level": "easy",
+	    "questType": "summonerSpell"
+    },
+    {
+        "id": 2,
+        "type":"singleChallenge",
+        "name": "Now you can die!",
+        "PL":"Tyle samo śmierci co zabójstw na koniec gry",
+        "EN":"Same amount of kill and deaths at end of match ",
+        "level": "hard",
+	    "questType": "activity"
+    },
+    {
+        "id": 3,
+        "type":"singleChallenge",
+        "name": "Satan Teemo",
+        "PL":"",
+        "EN":"Finish game with 6/6/6 stats",
+        "level": "medium",
+	    "questType": "activity"
+    },
+    {
+        "id": 4,
+        "type":"singleChallenge",
+        "name": "Rush guardian angel",
+        "PL":"",
+        "EN":"I dare you to buy as your first item : guardian angel",
+        "level": "easy",
+	    "questType": "runes"
+    },
+    {
+        "id": 5,
+        "type":"singleChallenge",
+        "name": "Old fashioned",
+        "PL":"",
+        "EN":"Replace your Flash with Ghost next game",
+        "level": "easy",
+	    "questType": "summonerSpell"
+    },
+    {
+        "id": 6,
+        "type":"singleChallenge",
+        "name": "Uncle Speedy",
+        "PL":"",
+        "EN":"I challenge you to play with Phase Rush runes",
+        "level": "easy",
+	    "questType": "runes"
+    },
+    {
+        "id": 7,
+        "type":"singleChallenge",
+        "name": "Blloooockk!",
+        "PL":"",
+        "EN":"I dare you to take Barrier as one of your summoner s spells.",
+        "level": "easy",
+	    "questType": "summonerSpell"
+    },
+    {
+        "id": 8,
+        "type":"singleChallenge",
+        "name": "Be a soul hunter",
+        "PL":"",
+        "EN":"I challenge you to play with Dark Harvest runes",
+        "level": "easy",
+	    "questType": "runes"
+    },
+    {
+        "id": 9,
+        "type":"singleChallenge",
+        "name": "You need damage",
+        "PL":"",
+        "EN":"I dare you choose Rabadon Deathcrown second item",
+        "level": "easy",
+	    "questType": "item"
+    },
+    {
+        "id": 10,
+        "type":"singleChallenge",
+        "name": "Meditate? Purify?",
+        "PL":"",
+        "EN":"Clean your bad luck using Cleanse",
+        "level": "easy",
+	    "questType": "summonerSpell"
+    },
+    {
+        "id": 11,
+        "type":"singleChallenge",
+        "name": "Slowly buy…",
+        "PL":"",
+        "EN":"I challenge you to play with Glacial Augment",
+        "level": "easy",
+	    "questType": "runes"
+    },
+    {
+        "id": 12,
+        "type":"singleChallenge",
+        "name": "Reinforcemenrs are here!",
+        "PL":"",
+        "EN":"Take teleport and gank everytime when you have it after 5min",
+        "level": "easy",
+	    "questType": "summonerSpell"
+    },
+    {
+        "id": 13,
+        "type":"singleChallenge",
+        "name": "Skrrrrr, money!",
+        "PL":"",
+        "EN":"You need to collect 5,000 gold in inventory",
+        "level": "medium",
+	    "questType": "activity"
+    },
+    {
+        "id": 14,
+        "type":"singleChallenge",
+        "name": "Play without R",
+        "PL":"",
+        "EN":"play without ultimate",
+        "level": "hard",
+	    "questType": "spell"
+    },
+    {
+        "id": 15,
+        "type":"singleChallenge",
+        "name": "Brrr, so cold….",
+        "PL":"",
+        "EN":"First item Frozen Mallet",
+        "level": "easy",
+	    "questType": "item"
+    },
+    {
+        "id": 16,
+        "type":"singleChallenge",
+        "name": "Rush Jaurim Fist",
+        "PL":"",
+        "EN":"I dare you to buy as your first item : Jaurim Fist",
+        "level": "easy",
+	    "questType": "item"
+    },
+    {
+        "id": 17,
+        "type":"singleChallenge",
+        "name": "Prohibited area",
+        "PL":"",
+        "EN":"Choose a lane you should never go to",
+        "level": "medium",
+	    "questType": "map"
+    },
+    {
+        "id": 18,
+        "type":"singleChallenge",
+        "name": "You are so tank",
+        "PL":"",
+        "EN":"I challenge you to start with Cloth Armor",
+        "level": "easy",
+	    "questType": "item"
+    },
+    {
+        "id": 19,
+        "type":"singleChallenge",
+        "name": "I m alive.",
+        "PL":"",
+        "EN":"Start with 5 Health Potion",
+        "level": "easy",
+	    "questType": "item"
+    },
+    {
+        "id": 20,
+        "type":"singleChallenge",
+        "name": "I am a blue man.",
+        "PL":"",
+        "EN":"You can build ony blue items",
+        "level": "medium",
+	    "questType": "item"
+    },
+    {
+        "id": 21,
+        "type":"singleChallenge",
+        "name": "I am a red man.",
+        "PL":"",
+        "EN":"You can build ony red items",
+        "level": "medium",
+    	"questType": "item"
+    },
+    {
+        "id": 22,
+        "type":"singleChallenge",
+        "name": "Don't be greedy",
+        "PL":"",
+        "EN":"You can’t take the kills",
+        "level": "medium",
+	    "questType": "activity"
+    },
+    {
+        "id": 23,
+        "type":"singleChallenge",
+        "name": "Let them rage",
+        "PL":"",
+        "EN":"Choose an enemy who kill you, follow and kill him all the game. Don t let him breathe!",
+        "level": "medium",
+	    "questType": "activity"
+    },
+    {
+        "id": 24,
+        "type":"singleChallenge",
+        "name": "Nigerundajoooo!",
+        "PL":"",
+        "EN":"Run faster than Usain in next match using Cleanse and Ghost",
+        "level": "easy",
+	    "questType": "summonerSpell"
+    },
+    {
+        "id": 25,
+        "type":"singleChallenge",
+        "name": "Hard to die",
+        "PL":"",
+        "EN":"I challenge you to play with Grasp of the Undying",
+        "level": "easy",
+	    "questType": "runes"
+    },
+    {
+        "id": 26,
+        "type":"singleChallenge",
+        "name": "Dont waste time",
+        "PL":"",
+        "EN":"You are allowed to make a maximum of 4 items",
+        "level": "medium",
+	    "questType": "item"
+    },
+    {
+        "id": 27,
+        "type":"singleChallenge",
+        "name": "Do you think you are lucky?",
+        "PL":"",
+        "EN":"I challenge you to play with the Prototype: Omnistone runes",
+        "level": "easy",
+	    "questType": "runes"
+    },
+    {
+        "id": 28,
+        "type":"singleChallenge",
+        "name": "Now… you hunter!",
+        "PL":"",
+        "EN":"For each dragon killed by the enemy, I dare you to make 5 kills",
+        "level": "medium",
+	    "questType": "activity"
+    },
+    {
+        "id": 29,
+        "type":"singleChallenge",
+        "name": "Ah… Regeneration",
+        "PL":"",
+        "EN":"First item Warmog s Armor",
+        "level": "easy",
+	    "questType": "item"
+    },
+    {
+        "id": 30,
+        "type":"partyChallenge",
+        "name": "Good vibes only",
+        "PL":"",
+        "EN":"You cant get get angry at you friend",
+        "level": "hard",
+	    "questType": "activity"
+    },
+    {
+        "id": 31,
+        "type":"partyChallenge",
+        "name": "Emergency time",
+        "PL":"",
+        "EN":"You can play only supports",
+        "level": "easy",
+	    "questType": "activity"
+    },
+    {
+        "id": 32,
+        "type":"partyChallenge",
+        "name": "Distinc summoner spell",
+        "PL":"",
+        "EN":"You can`t take same sammonres spells",
+        "level": "medium",
+	    "questType": "summonerSpell"
+    },
+    {
+        "id": 33,
+        "type":"partyChallenge",
+        "name": "River Sheen!",
+        "PL":"",
+        "EN":"I don`t need to explain",
+        "level": "easy",
+	    "questType": "activity"
+    },
+    {
+        "id": 34,
+        "type":"partyChallenge",
+        "name": "Szczupak Stirlandzki!",
+        "PL":"",
+        "EN":"I don`t need to explain",
+        "level": "easy",
+	    "questType": "activity"
+    },
+    {
+        "id": 35,
+        "type":"partyChallenge",
+        "name": "Don't let youes ears bleed",
+        "PL":"",
+        "EN":"Listen k-pop",
+        "level": "medium",
+	    "questType": "activity"
+    }
+]
