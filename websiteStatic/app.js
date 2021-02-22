@@ -41,7 +41,7 @@ const galleryInt = () => {
 };
 
 const fetchSingleChampion = () => {
-    fetch(`http://localhost:3000/data`)
+    fetch(`https://lolchallangerapi.herokuapp.com/data`)
         .then((res) => {
             return res.json()
         })
