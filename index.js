@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const importData = require("./data.json");
+const importData = require("./characters.json");
 const importchallenges = require("./challenges.json");
 //website
 const path = require('path');
