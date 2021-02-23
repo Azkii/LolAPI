@@ -53,7 +53,7 @@ const galleryInt = () => {
 };
 //fetch challenges
 const fetchChallenges = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/challenges`)
+    fetch(`http://localhost:3000/challenges`)
     .then((res) => {
         return res.json();
     })
@@ -64,7 +64,7 @@ const fetchChallenges = () => {
 };
 //fetch char 
 const fetchSingleChampion = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/champions`)
+    fetch(`http://localhost:3000/champions`)
         .then((res) => {
             return res.json()
         })
@@ -92,19 +92,21 @@ const rollSingleChallenge = (singleChallenges) => {
     console.log("rolling single")
     const resultChallange = singleChallenges[Math.floor(Math.random() * singleChallenges.length)];
     console.log(resultChallange);
+    displayDailyChallenge(resultChallange);
 };
 
 const rollPartyChallenge = (partyChallenges) => {
     console.log("rolling party");
     const resultChallange = partyChallenges[Math.floor(Math.random() * partyChallenges.length)];
     console.log(resultChallange);
+    displayDailyChallenge(resultChallange);
 };
 //display data
 const displayDailyChamp = (resultChampion) => {
     //prepere for the new data
     let appendBox = document.querySelector(".dailyResultCharacter");
     appendBox.innerHTML = "";
-    // create data
+    // create dataBox
     const h1Theme = document.createElement("h1");
     const sectionBox = document.createElement("div");
     const infoBox = document.createElement("div");
@@ -131,3 +133,40 @@ const displayDailyChamp = (resultChampion) => {
     appendBox.appendChild(h1Theme);
     appendBox.appendChild(sectionBox);
 }
+
+const displayDailyChallenge = (resultChallenge) => {
+    //prepere for the new data
+    let appendBox = document.querySelector(".dailyResultCharacter");
+    appendBox.innerHTML = "";
+    // create dataBox
+    const h1Theme = document.createElement("h1");
+    const sectionBox = document.createElement("div");
+    const infoBox = document.createElement("div");
+    const imageBox = document.createElement("div");
+    const challengeImage = document.createElement("img");
+    const h1Title = document.createElement("h1");
+    const parDesc = document.createElement("p");
+    const h2Level = document.createElement("h2");
+    // assigns classes
+    sectionBox.classList.add("challengeResult");
+    infoBox.classList.add("challengeInfo");
+    imageBox.classList.add("challengePhoto");
+    //assigns data
+    h1Theme.innerHTML = "Your challenge for today:";
+    challengeImage.src = "";
+    h1Title.innerHTML = resultChallenge.name;
+    parDesc.innerHTML = resultChallenge.EN;
+    h2Level.innerHTML = `Level: ${resultChallenge.level}`;
+    //append data
+    infoBox.appendChild(h1Title);
+    infoBox.appendChild(parDesc);
+    infoBox.appendChild(h2Level);
+
+    imageBox.appendChild(challengeImage);
+
+    sectionBox.appendChild(imageBox);
+    sectionBox.appendChild(infoBox);
+
+    appendBox.appendChild(h1Theme);
+    appendBox.appendChild(sectionBox);
+};

@@ -9,11 +9,19 @@
         transform: translateY(0px);
     }
 }
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+a:visited, a {
+    color: black;
+    outline: none;
+    text-decoration: none;
+}
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    height: 500vh;
     font-family: sans-serif;
 }
 header {
@@ -268,6 +276,7 @@ nav {
     }
     .thanks p,.thanks h2 {
         font-size: 18px;
+        text-align: center;
     }
     .reportBug {
         font-size: 18px;
@@ -276,7 +285,7 @@ nav {
         padding-bottom: 25px;
         width: 100%;
         border-radius: 0;
-        box-shadow: "";
+        box-shadow: none;
     }
 }
 .daily {
@@ -306,12 +315,12 @@ nav {
     align-items: center;
     justify-content: center;
 }
-.challangeList > div > img {
+.challangeList > div > a > img {
     width: 200px;
     height: 200px;
     border-radius: 10px;
 }
-.challangeList > div > p {
+.challangeList > div > a > p {
     text-align: center;
     color: black;
     font-size: 28px;
@@ -328,6 +337,7 @@ nav {
     flex-direction: column;
     width: 100%;
     min-height: 200px;
+    margin-bottom: 200px;
 }
 .dailyResultCharacter > h1 {
     text-align: center;
@@ -378,4 +388,108 @@ nav {
     .dailyResult-infoCharacter > h1 {
         font-size: 120px;
     }
+}
+.challengeResult {
+    display: flex;
+    margin-left: 10%;
+}
+.challengePhoto {
+    width: 35%;
+    height: 50vh;
+    background-color: #939ccf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.challengeInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 50vh;
+    background-color: #4a59af;
+    color: rgb(253, 251, 251);
+}
+.challengeInfo h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 70px;
+    letter-spacing: 1px;
+}
+.challengeInfo p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.challengeInfo h2 {
+    font-size: 30px;
+}
+@media only screen and (max-width: 1200px) {
+    .challengeResult {
+        margin: 0;
+    }
+    .challengeInfo {
+        width: 75%;
+    }
+    .challengeInfo h1 {
+        font-size: 50px;
+    }
+    .challengeInfo p {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .challengePhoto {
+        display: none;
+    }
+    .challengeInfo {
+        width: 100%;
+    }
+    .challengeInfo h1 {
+        font-size: 40px;
+    }
+    .challengeInfo p {
+        font-size: 18px;
+    }
+}
+footer {
+    height: 400px;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footerIconsBox {
+    color: whitesmoke;
+    font-size: 50px;
+}
+.footerIconsBox i:nth-child(2) {
+    margin: 0 10px 0 10px;
+}
+.footerIconsBox i {
+    opacity: 0.9;
+}
+.footerIconsBox i:hover {
+    opacity: 1;
+}
+.footerLinks {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.footerLinks p:nth-child(1) {
+    margin-right: 20px;
+}
+.FootercopyRights {
+    opacity: 0.7;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
 }

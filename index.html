@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/websiteStatic/icons/Favicon.png">
-    <title>_Challanger</title>
+    <title>_Challenger</title>
     <link rel="stylesheet" href="websiteStatic/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
@@ -14,25 +14,25 @@
 <body>
     <header>
         <nav>
-            <div class="iconBox">_Challenger</div>
+            <div class="iconBox"><a href="#headerInfo">_Challenger</a></div>
             <div class="navBtnBox">
                 <div>Explore.</div>
-                <div>Daily.</div>
-                <div>Challanges.</div>
-                <div><i class="fas fa-bug"></i></div>
+                <div><a href="#daily">Daily.</a></div>
+                <div>Challenges.</div>
+                <div><a href="#aboutUs"><i class="fas fa-bug"></i></a></i></div>
             </div>
         </nav>
-        <section class="headerInfo">
-            <h1>Leagule challanges to spicy up your games</h1>
-            <p>I hope you will help us building our comunnity</p>
+        <section id="headerInfo" class="headerInfo">
+            <h1>Leagule challenges to spicy up your games</h1>
+            <p>I hope you will help us building our community</p>
             <div><button>Get Started</button></div>
         </section>
         <section class="sectionPhoto">
             <img class="photoHeader" src="./websiteStatic/gallery/header/tal.png" alt="">
         </section>
     </header>
-    <section class="aboutUs">
-        <h1>Hey, hey wait a second!<div class="line"></div></h1>
+    <section id="aboutUs" class="aboutUs">
+        <h1>Hey, wait a second!<div class="line"></div></h1>
         <div class="aboutUsMain">
             <div class="thanks">
                 <h1>Thanks for using our app,</h1>
@@ -40,7 +40,7 @@
                     At the beginning I have to mention that this is a demo version of the app.
                     So some of the features may not work properly... yet.
                     At the bottom of the page you can submit your ideas
-                    for the future functions of the app, or your challange ideas.
+                    for the future functions of the app, or your challenge ideas.
                 </p>
                 <h2>We are glad that you are with us.</h2>
             </div>
@@ -55,35 +55,52 @@
                     </div>
                     <div class="messageBox">
                         <p>Message</p>
-                        <textarea type="text" placeholder="report Kha'Zix"></textarea>
+                        <textarea type="text" placeholder="message here"></textarea>
                     </div>
                     <button type="submit" title="submit bug"><i class="fas fa-bug"></i></button>
                 </form>
             </div>
         </div>
     </section>
-    <section class="daily">
-        <h1>Roll a challange for today</h1>
+    <section id="daily" class="daily">
+        <h1>Roll a challenge for today</h1>
         <div class="challangeList">
             <div class="rollCharBtn">
-                <img src="./websiteStatic/gallery/daily/char.jpg" alt="">
-                <p>Champion</p>
+                <a href="#dailyOutput">
+                    <img src="./websiteStatic/gallery/daily/char.jpg" alt="">
+                    <p>Champion</p>
+                </a>
             </div>
             <div class="singleChallBtn">
-                <img src="./websiteStatic/gallery/daily/challange.png" alt="">
-                <p>Challange</p>
+                <a href="#dailyOutput">
+                    <img src="./websiteStatic/gallery/daily/challange.png" alt="">
+                    <p>Challenge</p>
+                </a>
             </div>
             <div class="partyChallBtn">
-                <img src="./websiteStatic/gallery/daily/challange.png" alt="">
-                <p>Party Challange</p>
+                <a href="#dailyOutput">
+                    <img src="./websiteStatic/gallery/daily/challange.png" alt="">
+                    <p>Party Challenge</p>
+                </a>
             </div>
         </div>
     </section>
-    <section class="dailyResultCharacter">
+    <section id="dailyOutput" class="dailyResultCharacter">
         <!--Fetched data-->
     </section>
     <footer>
-
+        <div class="footerIconsBox">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-github"></i>
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="footerLinks">
+            <p>API info</p>
+            <p>Support</p>
+        </div>
+        <p class="FootercopyRights">
+            &#169; 2021 _Challenger
+        </p>
     </footer>
     <script src="websiteStatic/app.js"></script>
 </body>
