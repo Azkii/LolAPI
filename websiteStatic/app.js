@@ -29,13 +29,18 @@ createChallengeBtn.addEventListener("click", (e) => {
     const desc = document.querySelector(".ChallangeForm-descInput").value;
     const type = document.querySelector(".ChallangeForm-selectType").value;
     const level = document.querySelector(".ChallangeForm-selectLevel").value;
+    if (title !== "" && desc !== "") {
+        pushToChallengesLifeTime(title,desc,type,level);
 
-    pushToChallengesLifeTime(title,desc,type,level);
+        const convertedData = convertChallengeToLocal(title,desc,type,level);
+        localStorage.setItem(title,convertedData);
 
-    const convertedData = convertChallengeToLocal(title,desc,type,level);
-    localStorage.setItem(title,convertedData);
-
-
+        document.querySelector(".ChallangeForm-name").value = "";
+        document.querySelector(".ChallangeForm-descInput").value = "";
+    }
+    else {
+        alert("empty input(s)");
+    }
 });
 
 //FUNctions
@@ -72,7 +77,7 @@ const galleryInt = () => {
 };
 //fetch challenges
 const fetchChallenges = () => {
-    fetch(`http://localhost:3000/challenges`)
+    fetch(`https://lolchallangerapi.herokuapp.com/challenges`)
     .then((res) => {
         return res.json();
     })
@@ -86,7 +91,7 @@ const fetchChallenges = () => {
 };
 //fetch char 
 const fetchSingleChampion = () => {
-    fetch(`http://localhost:3000/champions`)
+    fetch(`https://lolchallangerapi.herokuapp.com/champions`)
         .then((res) => {
             return res.json()
         })

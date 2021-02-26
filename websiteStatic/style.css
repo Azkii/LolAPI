@@ -429,7 +429,7 @@ nav {
 }
 @media only screen and (max-width: 1200px) {
     .challengeResult {
-        margin: 0;
+        margin: 0 0 100px 0;
     }
     .challengeInfo {
         width: 75%;
@@ -447,9 +447,10 @@ nav {
     }
     .challengeInfo {
         width: 100%;
+        overflow: hidden;
     }
     .challengeInfo h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .challengeInfo p {
         font-size: 18px;
@@ -571,6 +572,15 @@ nav {
 @media only screen and (max-width: 1000px) {
     .createChallange-infoBox {
         display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .createChallange {
+        margin-bottom: 0;
+    }
+    .ChallangeForm {
+        width: 100%;
+        overflow: auto;
     }
 }
 
