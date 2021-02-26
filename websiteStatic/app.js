@@ -53,7 +53,7 @@ const galleryInt = () => {
 };
 //fetch challenges
 const fetchChallenges = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/challenges`)
+    fetch(`http://localhost:3000/challenges`)
     .then((res) => {
         return res.json();
     })
@@ -64,7 +64,7 @@ const fetchChallenges = () => {
 };
 //fetch char 
 const fetchSingleChampion = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/champions`)
+    fetch(`http://localhost:3000/champions`)
         .then((res) => {
             return res.json()
         })
