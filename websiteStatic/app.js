@@ -5,6 +5,9 @@ let partyChallenges = "";
 const champRollBtn = document.querySelector(".rollCharBtn");
 const singleChallBtn = document.querySelector(".singleChallBtn");
 const partyChallBtn = document.querySelector(".partyChallBtn");
+
+const createChallengeBtn = document.querySelector(".ChallangeForm-submit");
+
 window.addEventListener('load', () => {
     fetchSingleChampion();
     fetchChallenges();
@@ -19,6 +22,22 @@ singleChallBtn.addEventListener("click", () => {
 partyChallBtn.addEventListener("click", () => {
     rollPartyChallenge(partyChallenges);
 });
+
+createChallengeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const title = document.querySelector(".ChallangeForm-name").value;
+    const desc = document.querySelector(".ChallangeForm-descInput").value;
+    const type = document.querySelector(".ChallangeForm-selectType").value;
+    const level = document.querySelector(".ChallangeForm-selectLevel").value;
+
+    pushToChallengesLifeTime(title,desc,type,level);
+
+    const convertedData = convertChallengeToLocal(title,desc,type,level);
+    localStorage.setItem(title,convertedData);
+
+
+});
+
 //FUNctions
 const galleryInt = () => {
     const gallery = [
@@ -58,6 +77,9 @@ const fetchChallenges = () => {
         return res.json();
     })
     .then((data) => {
+        updateData().forEach((value) => {
+            data.push(value);
+        })
         challengeList = data;
         convertChallnges(challengeList);
     })
@@ -169,4 +191,43 @@ const displayDailyChallenge = (resultChallenge) => {
 
     appendBox.appendChild(h1Theme);
     appendBox.appendChild(sectionBox);
+};
+
+//convert Challenge To Local
+const convertChallengeToLocal = (title,desc,type,level) => {
+    return [99,type,title,"",desc,level,""];
+};
+//Update random when fetching from local
+const updateData = () => {
+    console.log("updating");
+    let items = {...localStorage};
+    items = Object.keys(items).map((key) => [items[key]]);
+    return items.map((value) => {
+        return fixedItem = convertToObjcetChallenge(value[0].split(","));
+    });
+};
+//ConvertToObjectChallenge
+const convertToObjcetChallenge = (data) => {
+    return {
+        "id": +data[0],
+        "type": data[1],
+        "name": data[2],
+        "PL": data[3],
+        "EN": data[4],
+        "level": data[5],
+	    "questType": data[6]
+    }
+};
+//pushtochallangesinrealTime
+const pushToChallengesLifeTime = (title,desc,type,level) => {
+    const data = {
+        "id": 99,
+        "type": type,
+        "name": title,
+        "PL": "",
+        "EN": desc,
+        "level": level,
+	    "questType": "",
+    };
+    (data.type === "singleChalleng") ? singleChallenges.push(data) : partyChallenges.push(data);
 };

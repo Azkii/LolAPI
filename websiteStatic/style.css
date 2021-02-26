@@ -560,7 +560,7 @@ nav {
 }
 .ChallangeForm-submit {
     margin-top: 40px;
-    width: 80%;
+    width: calc(80% + 20px);
     height: 50px;
     font-size: 25px;
     font-weight: bold;
@@ -573,7 +573,6 @@ nav {
         display: none;
     }
 }
-
 
 /*Footer section*/
 footer {
