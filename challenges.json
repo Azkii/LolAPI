@@ -283,7 +283,7 @@
         "type":"partyChallenge",
         "name": "Distinc summoner spell",
         "PL":"",
-        "EN":"You can`t take same sammonres spells",
+        "EN":"You can`t take same summoners spells",
         "level": "medium",
 	    "questType": "summonerSpell"
     },

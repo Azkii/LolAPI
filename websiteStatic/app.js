@@ -6,7 +6,12 @@ const champRollBtn = document.querySelector(".rollCharBtn");
 const singleChallBtn = document.querySelector(".singleChallBtn");
 const partyChallBtn = document.querySelector(".partyChallBtn");
 
+const mobileNavBtn = document.querySelector(".showNavBtn");
+
 const createChallengeBtn = document.querySelector(".ChallangeForm-submit");
+
+const formCreateBtn = document.querySelector(".ChallangeForm-create");
+const formInfoBtn = document.querySelector(".ChallangeForm-info");
 
 window.addEventListener('load', () => {
     fetchSingleChampion();
@@ -21,6 +26,12 @@ singleChallBtn.addEventListener("click", () => {
 });
 partyChallBtn.addEventListener("click", () => {
     rollPartyChallenge(partyChallenges);
+});
+
+mobileNavBtn.addEventListener("click", () => {
+    const mobileLinksLists = document.querySelector(".navMobile-list");
+    (mobileLinksLists.offsetHeight > 0) ? 
+    mobileLinksLists.style.height = "0" : mobileLinksLists.style.height = "350px";
 });
 
 createChallengeBtn.addEventListener("click", (e) => {
@@ -43,6 +54,15 @@ createChallengeBtn.addEventListener("click", (e) => {
     }
 });
 
+formCreateBtn.addEventListener("click", () => {
+    console.log("benis");
+    formCreateBtn.classList.add("clicked");
+    formInfoBtn.classList.remove("clicked");
+});
+formInfoBtn.addEventListener("click", () => {
+    formCreateBtn.classList.remove("clicked");
+    formInfoBtn.classList.add("clicked");
+});
 //FUNctions
 const galleryInt = () => {
     const gallery = [

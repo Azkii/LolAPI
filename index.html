@@ -13,7 +13,8 @@
 </head>
 <body>
     <header>
-        <nav>
+        <!--Desktop nav-->
+        <nav class="navDesktop">
             <div class="iconBox"><a href="#headerInfo">_Challenger</a></div>
             <div class="navBtnBox">
                 <div>Explore.</div>
@@ -22,8 +23,23 @@
                 <div><a href="#aboutUs"><i class="fas fa-bug"></i></a></i></div>
             </div>
         </nav>
+        <!--mobile nav-->
+        <nav class="navMobile">
+            <div class="iconBox">
+                <a href="#headerInfo">_Challenger</a>
+            </div>
+            <button class="showNavBtn">
+                <i class="fas fa-hamburger"></i>
+            </button>
+            <div class="navMobile-list">
+                <h1>Explore.</h1>
+                <h1>Challenges</h1>
+                <h1><a href="#daily">Daily.</a></h1>
+                <h1>Report bug</h1>
+            </div>
+        </nav>
         <section id="headerInfo" class="headerInfo">
-            <h1>Leagule challenges to spicy up your games</h1>
+            <h1>League challenges to spicy up your games</h1>
             <p>I hope you will help us building our community</p>
             <div><button>Get Started</button></div>
         </section>
@@ -91,8 +107,8 @@
     <section class="createChallange">
         <div class="ChallangeForm">
             <div class="ChallangeForm-options">
-                <button class="clicked">Create</button>
-                <button>Info</button>
+                <button class="ChallangeForm-create clicked">Create</button>
+                <button class="ChallangeForm-info">Info</button>
             </div>
             <h1>Create custom challenge</h1>
             <form>
