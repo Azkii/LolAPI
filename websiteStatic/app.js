@@ -96,7 +96,7 @@ const galleryInt = () => {
 };
 //fetch challenges
 const fetchChallenges = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/challenges`)
+    fetch(`http://localhost:3000/challenges`)
     .then((res) => {
         return res.json();
     })
@@ -110,7 +110,7 @@ const fetchChallenges = () => {
 };
 //fetch char 
 const fetchSingleChampion = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/champions`)
+    fetch(`http://localhost:3000/champions`)
         .then((res) => {
             return res.json()
         })
@@ -152,8 +152,10 @@ const displayDailyChamp = (resultChampion) => {
     //prepere for the new data
     let appendBox = document.querySelector(".dailyResultCharacter");
     appendBox.innerHTML = "";
+    appendBox.style.backgroundImage = "";
+    appendBox.style.minHeight = "100vh";
     // create dataBox
-    const h1Theme = document.createElement("h1");
+    // deleted temp const h1Theme = document.createElement("h1");
     const sectionBox = document.createElement("div");
     const infoBox = document.createElement("div");
     const imageBcg = document.createElement("img");
@@ -164,7 +166,7 @@ const displayDailyChamp = (resultChampion) => {
     infoBox.classList.add("dailyResult-infoCharacter");
     imageBcg.classList.add("dailyResult-imageCharacter");
     //asign data
-    h1Theme.innerHTML = "Your champion for today";
+    // delete temp h1Theme.innerHTML = "Your champion for today";
     parInfo.innerHTML = resultChampion.title;
     h1Info.innerHTML = resultChampion.name;
     imageBcg.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${resultChampion.name}_0.jpg`;
@@ -175,7 +177,7 @@ const displayDailyChamp = (resultChampion) => {
     sectionBox.appendChild(infoBox);
     sectionBox.appendChild(imageBcg);
     
-    appendBox.appendChild(h1Theme);
+    // deleted temp appendBox.appendChild(h1Theme);
     appendBox.appendChild(sectionBox);
 }
 
@@ -183,33 +185,29 @@ const displayDailyChallenge = (resultChallenge) => {
     //prepere for the new data
     let appendBox = document.querySelector(".dailyResultCharacter");
     appendBox.innerHTML = "";
+    appendBox.style.backgroundImage = `url("/websiteStatic/gallery/daily/dailyBack.jpg")`;
+    appendBox.style.minHeight = "100vh";
     // create dataBox
     const h1Theme = document.createElement("h1");
     const sectionBox = document.createElement("div");
     const infoBox = document.createElement("div");
-    const imageBox = document.createElement("div");
-    const challengeImage = document.createElement("img");
     const h1Title = document.createElement("h1");
     const parDesc = document.createElement("p");
     const h2Level = document.createElement("h2");
     // assigns classes
     sectionBox.classList.add("challengeResult");
     infoBox.classList.add("challengeInfo");
-    imageBox.classList.add("challengePhoto");
     //assigns data
     h1Theme.innerHTML = "Your challenge for today:";
-    challengeImage.src = "";
     h1Title.innerHTML = resultChallenge.name;
     parDesc.innerHTML = resultChallenge.EN;
     h2Level.innerHTML = `Level: ${resultChallenge.level}`;
+    //change styles
+    h1Theme.style.color = "whitesmoke";
     //append data
     infoBox.appendChild(h1Title);
     infoBox.appendChild(parDesc);
     infoBox.appendChild(h2Level);
-
-    imageBox.appendChild(challengeImage);
-
-    sectionBox.appendChild(imageBox);
     sectionBox.appendChild(infoBox);
 
     appendBox.appendChild(h1Theme);

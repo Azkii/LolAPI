@@ -346,7 +346,7 @@ header {
     padding-bottom: 20px;
     width: 100%;
     min-height: 600px;
-    background: whitesmoke;
+    background: rgb(252, 252, 252);
     color: black;
 }
 .daily h1 {
@@ -388,15 +388,19 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .dailyResultCharacter > h1 {
+    color: black;
     text-align: center;
     font-size: 40px;
-    margin: 80px 0 80px 0;
+    margin: 160px 0 80px 0;
     letter-spacing: 2px;
 }
 .dailyResult-imageBoxCharacter {
+    margin-top: 140px;
     overflow: hidden;
     width: 100%;
     height: 80vh;
@@ -443,25 +447,18 @@ header {
 }
 .challengeResult {
     display: flex;
-    margin-left: 10%;
-    margin-bottom: 200px;
-}
-.challengePhoto {
-    width: 35%;
-    height: 50vh;
-    background-color: #939ccf;
-    display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 200px;
 }
 .challengeInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 55%;
+    min-width: 55%;
     height: 50vh;
-    background-color: #4a59af;
+    background-color: #2f3a46ed;
     color: rgb(253, 251, 251);
 }
 .challengeInfo h1 {
@@ -514,6 +511,7 @@ header {
     align-items: center;
     width: 100%;
     text-align: center;
+    margin-top: 200px;
     margin-bottom: 200px;
 }
 .createChallange-infoBox {
