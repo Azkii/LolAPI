@@ -64,16 +64,16 @@
                 <h1>
                     Report a bug <i class="fas fa-bug"></i>
                 </h1>
-                <form class="reportBugForm">
+                <form class="reportBugForm" action="https://formspree.io/f/mvovjayr" method="POST" >
                     <div class="clientInputs">
-                        <input type="email" name="" placeholder="your email">
-                        <input type="text" placeholder="name">
+                        <input type="email" name="_replyto" placeholder="your email">
+                        <input type="text" name="name" placeholder="name">
                     </div>
                     <div class="messageBox">
                         <p>Message</p>
-                        <textarea type="text" placeholder="message here"></textarea>
+                        <textarea type="text" name="message"  placeholder="message here"></textarea>
                     </div>
-                    <button type="submit" title="submit bug"><i class="fas fa-bug"></i></button>
+                    <button type="submit" class="submitBugBtn" title="submit bug"><i class="fas fa-bug"></i></button>
                 </form>
             </div>
         </div>

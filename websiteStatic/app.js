@@ -31,7 +31,7 @@ partyChallBtn.addEventListener("click", () => {
 mobileNavBtn.addEventListener("click", () => {
     const mobileLinksLists = document.querySelector(".navMobile-list");
     (mobileLinksLists.offsetHeight > 0) ? 
-    mobileLinksLists.style.height = "0" : mobileLinksLists.style.height = "350px";
+    mobileLinksLists.style.height = "0" : mobileLinksLists.style.height = "400px";
 });
 
 createChallengeBtn.addEventListener("click", (e) => {
@@ -55,7 +55,6 @@ createChallengeBtn.addEventListener("click", (e) => {
 });
 
 formCreateBtn.addEventListener("click", () => {
-    console.log("benis");
     formCreateBtn.classList.add("clicked");
     formInfoBtn.classList.remove("clicked");
 });
@@ -169,7 +168,6 @@ const displayDailyChamp = (resultChampion) => {
     parInfo.innerHTML = resultChampion.title;
     h1Info.innerHTML = resultChampion.name;
     imageBcg.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${resultChampion.name}_0.jpg`;
-    console.log(imageBcg.src === undefined);
     //append data
     infoBox.appendChild(parInfo);
     infoBox.appendChild(h1Info);

@@ -42,7 +42,7 @@ header {
     z-index: 1000;
 }
 .navMobile {
-    color: rgb(21, 9, 32);
+    color: black;
     position: fixed;
     display: none;
     justify-content: space-between;
