@@ -665,6 +665,13 @@ footer {
     font-size: 24px;
     font-weight: bold;
 }
+.footerLinks p {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.footerLinks p:hover {
+    opacity: 1;
+}
 .footerLinks p:nth-child(1) {
     margin-right: 20px;
 }
