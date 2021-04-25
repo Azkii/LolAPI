@@ -16,4 +16,12 @@ Technologies:
 </br>
 <img src="https://github.com/Azkii/LolAPI/blob/master/readme%20files/lol%20app2.gif" align="center" width="100%" >
 </br>
+<p align="center">
+  <img src="https://github.com/Azkii/LolAPI/blob/master/readme%20files/lol%20mobile1.gif" align="center" width="30%" >
+  &nbsp;
+  <img src="https://github.com/Azkii/LolAPI/blob/master/readme%20files/lol%20mobile2.gif" align="center"  width="30%">
+  &nbsp;
+  <img src="https://github.com/Azkii/LolAPI/blob/master/readme%20files/lol%20mobile3.gif" align="center"  width="30%">
+</p>
+</br>
 <p> App Demo Link: https://lolchallenges-roll.herokuapp.com/ </p>
