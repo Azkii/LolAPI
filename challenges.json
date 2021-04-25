@@ -175,18 +175,9 @@
         "type":"singleChallenge",
         "name": "I am a blue man.",
         "PL":"",
-        "EN":"You can build ony blue items",
+        "EN":"You can build only blue items",
         "level": "medium",
 	    "questType": "item"
-    },
-    {
-        "id": 21,
-        "type":"singleChallenge",
-        "name": "I am a red man.",
-        "PL":"",
-        "EN":"You can build ony red items",
-        "level": "medium",
-    	"questType": "item"
     },
     {
         "id": 22,
@@ -202,18 +193,9 @@
         "type":"singleChallenge",
         "name": "Let them rage",
         "PL":"",
-        "EN":"Choose an enemy who kill you, follow and kill him all the game. Don t let him breathe!",
+        "EN":"Choose an enemy who kill you, follow and kill him all the game. Don't let him breathe!",
         "level": "medium",
 	    "questType": "activity"
-    },
-    {
-        "id": 24,
-        "type":"singleChallenge",
-        "name": "Nigerundajoooo!",
-        "PL":"",
-        "EN":"Run faster than Usain in next match using Cleanse and Ghost",
-        "level": "easy",
-	    "questType": "summonerSpell"
     },
     {
         "id": 25,
@@ -281,37 +263,10 @@
     {
         "id": 32,
         "type":"partyChallenge",
-        "name": "Distinc summoner spell",
+        "name": "Distinct summoner spell",
         "PL":"",
         "EN":"You can`t take same summoners spells",
         "level": "medium",
 	    "questType": "summonerSpell"
-    },
-    {
-        "id": 33,
-        "type":"partyChallenge",
-        "name": "River Sheen!",
-        "PL":"",
-        "EN":"I don`t need to explain",
-        "level": "easy",
-	    "questType": "activity"
-    },
-    {
-        "id": 34,
-        "type":"partyChallenge",
-        "name": "Szczupak Stirlandzki!",
-        "PL":"",
-        "EN":"I don`t need to explain",
-        "level": "easy",
-	    "questType": "activity"
-    },
-    {
-        "id": 35,
-        "type":"partyChallenge",
-        "name": "Don't let youes ears bleed",
-        "PL":"",
-        "EN":"Listen k-pop",
-        "level": "medium",
-	    "questType": "activity"
     }
 ]
