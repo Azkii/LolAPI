@@ -2,6 +2,7 @@ let singleChamps = "";
 let challengeList = "";
 let singleChallenges = "";
 let partyChallenges = "";
+
 const champRollBtn = document.querySelector(".rollCharBtn");
 const singleChallBtn = document.querySelector(".singleChallBtn");
 const partyChallBtn = document.querySelector(".partyChallBtn");
@@ -62,7 +63,7 @@ formInfoBtn.addEventListener("click", () => {
     formCreateBtn.classList.remove("clicked");
     formInfoBtn.classList.add("clicked");
 });
-//FUNctions
+//functions
 const galleryInt = () => {
     const gallery = [
         {
@@ -96,7 +97,7 @@ const galleryInt = () => {
 };
 //fetch challenges
 const fetchChallenges = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/challenges`)
+    fetch(`http://localhost:3000/challenges`)
     .then((res) => {
         return res.json();
     })
@@ -110,7 +111,7 @@ const fetchChallenges = () => {
 };
 //fetch char 
 const fetchSingleChampion = () => {
-    fetch(`https://lolchallangerapi.herokuapp.com/champions`)
+    fetch(`http://localhost:3000/champions`)
         .then((res) => {
             return res.json()
         })
@@ -216,7 +217,7 @@ const displayDailyChallenge = (resultChallenge) => {
 
 //convert Challenge To Local
 const convertChallengeToLocal = (title,desc,type,level) => {
-    return [99,type,title,"",desc,level,""];
+    return ["custom",type,title,"",desc,level,""];
 };
 //Update random when fetching from local
 const updateData = () => {
@@ -242,7 +243,7 @@ const convertToObjcetChallenge = (data) => {
 //pushtochallangesinrealTime
 const pushToChallengesLifeTime = (title,desc,type,level) => {
     const data = {
-        "id": 99,
+        "id": "custom",
         "type": type,
         "name": title,
         "PL": "",
